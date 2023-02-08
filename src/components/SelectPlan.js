@@ -103,7 +103,7 @@ const SelectPlan = (props) => {
                 </div>
                 <div className="contentTwo divThree">
                   <span onClick={(e)=>props.handelButton(props.page-1)}>Go back</span>
-                  <div onClick={(e)=>props.handelButton(props.page-1)}>
+                  <div onClick={(e)=>props.handelButton(props.page+1)}>
                     <button >Next Step</button>
                   </div>
                 </div>

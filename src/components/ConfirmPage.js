@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const ConfirmPage = (componentsList) => {
+const ConfirmPage = (props) => {
   return (
     <>
          
@@ -40,9 +40,9 @@ const ConfirmPage = (componentsList) => {
                 </div>
 
                 <div className="contentFour  DivFour">
-                  <span >Go back</span>
+                  <span onClick={(e)=>props.handelButton(props.page-1)} >Go back</span>
                   <div>
-                    <button >Confirm</button>
+                    <button onClick={(e)=>props.handelButton(props.page+1)} >Confirm</button>
                   </div>
                 </div>
               </div>

@@ -4,30 +4,23 @@ import PersonalInfo from "./components/PersonalInfo";
 import PickAddOns from "./components/PickAddOns";
 import ConfirmPage from "./components/ConfirmPage";
 import SelectPlan from "./components/SelectPlan";
-// import Submit from "./components/Submit";
-
+import Submit from "./components/Submit";
 
 
 function App() {
- 
-let [page,setPage] =useState(0);
+  let [page, setPage] = useState(0);
 
+  const handelButton = (number) => {
 
-const handelButton = (number) =>{
-  alert(number)
-     setPage(number);
-    
-}
-const componentsList= [
-  <PersonalInfo  />,
-  <SelectPlan  page={page} handelButton={handelButton}   />,
-  <PickAddOns   page={page} handelButton={handelButton} />,
-  <ConfirmPage  page={page} handelButton={handelButton} /> ,
-  
- 
-
-];
-
+    setPage(number);
+  };
+  const componentsList = [
+    <PersonalInfo page={page} handelButton={handelButton} />,
+    <SelectPlan   page={page} handelButton={handelButton} />,
+    <PickAddOns   page={page} handelButton={handelButton} />,
+    <ConfirmPage  page={page} handelButton={handelButton} />,
+    <Submit       page={page} handelButton={handelButton} />,
+  ];
 
   return (
     <div className="App">
@@ -36,7 +29,7 @@ const componentsList= [
           <div className="left-contentBox">
             <div className="selectionArea">
               <div className="inputButton">
-                <button value="var1" onClick={()=>handelButton(0)} >
+                <button value="var1" onClick={() => handelButton(0)}>
                   1
                 </button>
                 <div>
@@ -45,7 +38,7 @@ const componentsList= [
                 </div>
               </div>
               <div className="inputButton">
-                <button value="var2" onClick={()=>handelButton(1)}>
+                <button value="var2" onClick={() => handelButton(1)}>
                   2
                 </button>
                 <div>
@@ -54,7 +47,7 @@ const componentsList= [
                 </div>
               </div>
               <div className="inputButton">
-                <button value="var3" onClick={()=>handelButton(2)}>
+                <button value="var3" onClick={() => handelButton(2)}>
                   3
                 </button>
                 <div>
@@ -62,22 +55,17 @@ const componentsList= [
                   <span>ADD-ONS</span>
                 </div>
               </div>
-              <div className="inputButton" onClick={()=>handelButton(4)}>
-                <button value="var4" >
-                  4
-                </button>
+              <div className="inputButton" onClick={() => handelButton(4)}>
+                <button value="var4">4</button>
                 <div>
                   <p>STEP 4</p>
                   <span>SUMMARY</span>
                 </div>
               </div>
             </div>
-            
           </div>
 
-          <div className="right-contentBox">
-              {componentsList[page]}
-          </div>
+          <div className="right-contentBox">{componentsList[page]}</div>
         </div>
       </div>
     </div>

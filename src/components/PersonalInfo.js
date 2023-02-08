@@ -3,7 +3,8 @@ import React from 'react'
 const PersonalInfo = (props) => {
   
   return (
-    <>
+    <> 
+       
     
               <div className="content contentOne">
                 <div>
@@ -33,7 +34,7 @@ const PersonalInfo = (props) => {
                 </div>
 
                 <div id="button">
-                  <button onClick={(e)=>props.handelButton(props.page+1)} >Next Step</button>
+                  <button type='submit' onClick={(e)=>props.handelButton(props.page+1)} >Next Step</button>
                 </div>
               </div>
              
