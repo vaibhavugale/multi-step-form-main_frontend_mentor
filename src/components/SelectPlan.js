@@ -6,7 +6,7 @@ const iconList = [
   
 ]
 
-const SelectPlan = (componentsList) => {
+const SelectPlan = (props) => {
   let [icon,setIcon] = useState(0)
   function handelIcon(){
     if(icon==0){
@@ -102,8 +102,8 @@ const SelectPlan = (componentsList) => {
                   <span>Yearly</span>
                 </div>
                 <div className="contentTwo divThree">
-                  <span >Go back</span>
-                  <div>
+                  <span onClick={(e)=>props.handelButton(props.page-1)}>Go back</span>
+                  <div onClick={(e)=>props.handelButton(props.page-1)}>
                     <button >Next Step</button>
                   </div>
                 </div>

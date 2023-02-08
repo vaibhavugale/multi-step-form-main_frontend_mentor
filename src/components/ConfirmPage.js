@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const ConfirmPage = (componentsList) => {
   return (
     <>
@@ -13,7 +14,7 @@ const ConfirmPage = (componentsList) => {
                   <div className="contentFourInsideDivTwo">
                     <span>
                       Arcade(Monthly) <br />
-                      <a href="#">Change</a>
+                      <a href= "#" >Change</a>
                     </span>
                     <span>&#36;9/mo</span>
                   </div>

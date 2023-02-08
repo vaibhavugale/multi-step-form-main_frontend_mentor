@@ -1,6 +1,12 @@
 import React from 'react'
+import Submit from './Submit';
 
-const DurationTime = (componentsList) => {
+
+const PickAddOns = (props) => {
+
+
+
+
   
   return (
     <>
@@ -50,9 +56,9 @@ const DurationTime = (componentsList) => {
                   </div>
                 </div>
                 <div className="contentThree divThree">
-                    <div><span>Go back</span></div>
+                    <div onClick={(e)=>props.handelButton(props.page-1)}><span>Go back</span></div>
                   <div>
-                    <button >Next Step</button>
+                    <button onClick={(e)=>props.handelButton(props.page+1)}>Next Step</button>
                   </div>
                 </div>
               </div>
@@ -61,4 +67,4 @@ const DurationTime = (componentsList) => {
   )
 }
 
-export default DurationTime;
+export default PickAddOns;

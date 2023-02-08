@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PersonalInfo = (componentsList) => {
+const PersonalInfo = (props) => {
   
   return (
     <>
@@ -33,7 +33,7 @@ const PersonalInfo = (componentsList) => {
                 </div>
 
                 <div id="button">
-                  <button >Next Step</button>
+                  <button onClick={(e)=>props.handelButton(props.page+1)} >Next Step</button>
                 </div>
               </div>
              
